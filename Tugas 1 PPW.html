@@ -187,6 +187,9 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas%202%20PPW.html">Nama  : Dohan Rizqi Hadityo</a></li>
 
 
+<li class="toctree-l1"><a class="reference internal" href="Tugas_3_Ekplorasi%20Mandiri%20Skip%20gram.html">Nama : Dohan Rizqi Hadityo</a></li>
+
+
 </ul>
 
     </div>
@@ -568,15 +571,13 @@ Pyppeteer adalah porting Puppeteer ke Python. Ini memungkinkan Anda untuk menggu
 Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (4.12.3)
 Requirement already satisfied: pandas in /usr/local/lib/python3.10/dist-packages (2.1.4)
 Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests) (3.3.2)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests) (3.8)
-Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests) (2.0.7)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests) (3.10)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests) (2.2.3)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests) (2024.8.30)
 Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4) (2.6)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy&lt;2,&gt;=1.22.4 in /usr/local/lib/python3.10/dist-packages (from pandas) (1.26.4)
+Requirement already satisfied: numpy&lt;2,&gt;=1.22.4 in /usr/local/lib/python3.10/dist-packages (from pandas) (1.26.4)
 Requirement already satisfied: python-dateutil&gt;=2.8.2 in /usr/local/lib/python3.10/dist-packages (from pandas) (2.8.2)
-Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas) (2024.1)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas) (2024.2)
 Requirement already satisfied: tzdata&gt;=2022.1 in /usr/local/lib/python3.10/dist-packages (from pandas) (2024.1)
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.16.0)
 </pre></div>
@@ -669,26 +670,114 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-pac
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   No                                       Judul Berita  \
-0   1  Profil Verrell Bramasta, Perjalanan dari Dunia...   
-1   2              Garam Laut Vs Garam Meja, Sehat Mana?   
-2   3  Kelas Rusak, Siswa di Bandung Barat Belajar di...   
-3   4  Luncurkan Kampanye #PastiAdaSolusi, Bukti Komi...   
-4   5  Kun Wardana: Kami Menerapkan Politik Santun, T...   
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-3-82d1e9bbe1a6&gt;</span> in <span class="ni">&lt;cell line: 12&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span> 
+<span class="g g-Whitespace">     </span><span class="mi">37</span>                     <span class="c1"># Mendapatkan isi artikel dari halaman artikel</span>
+<span class="ne">---&gt; </span><span class="mi">38</span>                     <span class="n">artikel_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">artikel_link</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> 
+<span class="g g-Whitespace">     </span><span class="mi">40</span>                     <span class="c1"># Cek apakah request sukses</span>
 
-                                          Isi Berita Tanggal Berita  \
-0  JAKARTA, KOMPAS.com - Artis Verrell Bramasta t...     11/09/2024   
-1  KOMPAS.com - Garam adalah salah satu bahan dap...     11/09/2024   
-2  BANDUNG BARAT, KOMPAS.com - Puluhan siswa SD d...     11/09/2024   
-3  KOMPAS.com – Telkomsel meluncurkan kampanye te...     11/09/2024   
-4   JAKARTA, KOMPAS.com - Bakal calon wakil guber...     11/09/2024   
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/api.py</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span><span class="s2"> </span>
+<span class="ne">---&gt; </span><span class="mi">73</span><span class="s2">     return request(&quot;get&quot;, url, params=params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">75</span><span class="s2"> </span>
 
-  Kategori Berita  
-0            HYPE  
-1            FOOD  
-2        REGIONAL  
-3     ADVERTORIAL  
-4            NEWS  
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/api.py</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span><span class="s2">     # cases, and look like a memory leak in others.</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span><span class="s2">     with sessions.Session() as session:</span>
+<span class="ne">---&gt; </span><span class="mi">59</span><span class="s2">         return session.request(method=method, url=url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span><span class="s2"> </span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/sessions.py</span> in <span class="ni">request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
+<span class="g g-Whitespace">    </span><span class="mi">587</span><span class="s2">         }</span>
+<span class="g g-Whitespace">    </span><span class="mi">588</span><span class="s2">         send_kwargs.update(settings)</span>
+<span class="ne">--&gt; </span><span class="mi">589</span><span class="s2">         resp = self.send(prep, **send_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">590</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">591</span><span class="s2">         return resp</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/sessions.py</span> in <span class="ni">send</span><span class="nt">(self, request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">701</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="s2">         # Send the request</span>
+<span class="ne">--&gt; </span><span class="mi">703</span><span class="s2">         r = adapter.send(request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span><span class="s2">         # Total elapsed time of the request (approximately)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/adapters.py</span> in <span class="ni">send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">665</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">666</span><span class="s2">         try:</span>
+<span class="ne">--&gt; </span><span class="mi">667</span><span class="s2">             resp = conn.urlopen(</span>
+<span class="g g-Whitespace">    </span><span class="mi">668</span><span class="s2">                 method=request.method,</span>
+<span class="g g-Whitespace">    </span><span class="mi">669</span><span class="s2">                 url=url,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">787</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">788</span><span class="s2">             # Make the request on the HTTPConnection object</span>
+<span class="ne">--&gt; </span><span class="mi">789</span><span class="s2">             response = self._make_request(</span>
+<span class="g g-Whitespace">    </span><span class="mi">790</span><span class="s2">                 conn,</span>
+<span class="g g-Whitespace">    </span><span class="mi">791</span><span class="s2">                 method,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
+<span class="g g-Whitespace">    </span><span class="mi">534</span><span class="s2">         # Receive the response from the server</span>
+<span class="g g-Whitespace">    </span><span class="mi">535</span><span class="s2">         try:</span>
+<span class="ne">--&gt; </span><span class="mi">536</span><span class="s2">             response = conn.getresponse()</span>
+<span class="g g-Whitespace">    </span><span class="mi">537</span><span class="s2">         except (BaseSSLError, OSError) as e:</span>
+<span class="g g-Whitespace">    </span><span class="mi">538</span><span class="s2">             self._raise_timeout(err=e, url=url, timeout_value=read_timeout)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connection.py</span> in <span class="ni">getresponse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">505</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">506</span><span class="s2">         # Get the response from http.client.HTTPConnection</span>
+<span class="ne">--&gt; </span><span class="mi">507</span><span class="s2">         httplib_response = super().getresponse()</span>
+<span class="g g-Whitespace">    </span><span class="mi">508</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">509</span><span class="s2">         try:</span>
+
+<span class="nn">/usr/lib/python3.10/http/client.py</span> in <span class="ni">getresponse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1373</span><span class="s2">         try:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1374</span><span class="s2">             try:</span>
+<span class="ne">-&gt; </span><span class="mi">1375</span><span class="s2">                 response.begin()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1376</span><span class="s2">             except ConnectionError:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1377</span><span class="s2">                 self.close()</span>
+
+<span class="nn">/usr/lib/python3.10/http/client.py</span> in <span class="ni">begin</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">316</span><span class="s2">         # read until we get a non-100 response</span>
+<span class="g g-Whitespace">    </span><span class="mi">317</span><span class="s2">         while True:</span>
+<span class="ne">--&gt; </span><span class="mi">318</span><span class="s2">             version, status, reason = self._read_status()</span>
+<span class="g g-Whitespace">    </span><span class="mi">319</span><span class="s2">             if status != CONTINUE:</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span><span class="s2">                 break</span>
+
+<span class="nn">/usr/lib/python3.10/http/client.py</span> in <span class="ni">_read_status</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">277</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">278</span><span class="s2">     def _read_status(self):</span>
+<span class="ne">--&gt; </span><span class="mi">279</span><span class="s2">         line = str(self.fp.readline(_MAXLINE + 1), &quot;iso-8859-1&quot;)</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span><span class="s2">         if len(line) &gt; _MAXLINE:</span>
+<span class="g g-Whitespace">    </span><span class="mi">281</span><span class="s2">             raise LineTooLong(&quot;status line&quot;)</span>
+
+<span class="nn">/usr/lib/python3.10/socket.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span><span class="s2">         while True:</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="s2">             try:</span>
+<span class="ne">--&gt; </span><span class="mi">705</span><span class="s2">                 return self._sock.recv_into(b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span><span class="s2">             except timeout:</span>
+<span class="g g-Whitespace">    </span><span class="mi">707</span><span class="s2">                 self._timeout_occurred = True</span>
+
+<span class="nn">/usr/lib/python3.10/ssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1301</span><span class="s2">                   &quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot; %</span>
+<span class="g g-Whitespace">   </span><span class="mi">1302</span><span class="s2">                   self.__class__)</span>
+<span class="ne">-&gt; </span><span class="mi">1303</span><span class="s2">             return self.read(nbytes, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1304</span><span class="s2">         else:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1305</span><span class="s2">             return super().recv_into(buffer, nbytes, flags)</span>
+
+<span class="nn">/usr/lib/python3.10/ssl.py</span> in <span class="ni">read</span><span class="nt">(self, len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1157</span><span class="s2">         try:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1158</span><span class="s2">             if buffer is not None:</span>
+<span class="ne">-&gt; </span><span class="mi">1159</span><span class="s2">                 return self._sslobj.read(len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1160</span><span class="s2">             else:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1161</span><span class="s2">                 return self._sslobj.read(len)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
