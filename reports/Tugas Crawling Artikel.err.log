@@ -1,0 +1,72 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import requests
+from bs4 import BeautifulSoup
+import csv
+
+# URL dari artikel sepak bola di IDN Times
+url = 'https://www.idntimes.com/sport/soccer/sandy-firdaus/sebelum-gabung-timnas-indonesia-mees-hilgers-lawan-mourinho'
+
+# Membuat permintaan ke URL
+response = requests.get(url)
+
+# Inisialisasi data yang akan disimpan
+# Mengambil ulang dan membersihkan data yang diminta
+artikel_mees = []
+
+if response.status_code == 200:
+    # Parsing halaman web
+    soup = BeautifulSoup(response.text, 'html.parser')
+    
+    # Mengambil judul artikel
+    title = soup.find('h1').get_text().strip()
+    
+    # Mengambil tanggal publikasi artikel dan membersihkan spasi berlebih
+    date = soup.find('time').get_text().strip()
+    
+    # Mengambil isi artikel dengan membersihkan konten tambahan
+    content = soup.find_all('p')
+    article_text = '\n'.join([p.get_text().strip() for p in content if p.get_text().strip()])
+
+    # Simpan data dalam bentuk dictionary yang telah dibersihkan
+    artikel_mees.append({
+        'Title': title,
+        'Date': date,
+        'Content': article_text
+    })
+
+# Membuat dataframe dari data yang telah dibersihkan
+data_mees = pd.DataFrame(artikel_mees)
+
+# Menampilkan dataframe yang bersih
+data_mees
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m<ipython-input-1-71013659f60d>[0m in [0;36m<cell line: 37>[0;34m()[0m
+[1;32m     35[0m [0;34m[0m[0m
+[1;32m     36[0m [0;31m# Membuat dataframe dari data yang telah dibersihkan[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 37[0;31m [0mdata_mees[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mDataFrame[0m[0;34m([0m[0martikel_mees[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     38[0m [0;34m[0m[0m
+[1;32m     39[0m [0;31m# Menampilkan dataframe yang bersih[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mNameError[0m: name 'pd' is not defined
+
