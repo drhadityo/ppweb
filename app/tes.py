@@ -11,8 +11,8 @@ import pickle
 import nltk
 
 # Download NLTK resources (run once)
+nltk.download('punkt')
 nltk.download('stopwords')
-nltk.download('punkt', download_dir='C:/nltk_data')
 
 # Function for text preprocessing
 def preprocess_text(text):
