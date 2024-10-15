@@ -43,7 +43,7 @@ def main():
         logistic_regression_model = pickle.load(f)
 
     # Load the pre-trained TfidfVectorizer
-    with open('tfidf_vectorizer.pkl', 'rb') as f:
+    with open('app/tfidf_vectorizer.pkl', 'rb') as f:
         vectorizer = pickle.load(f)
 
     # Get user input
