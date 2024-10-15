@@ -39,7 +39,7 @@ def main():
     st.write("Aplikasi ini merupakan menggunakan preprocesses text dan membuat prediksi menggunakan pre-trained Logistic Regression Model.")
 
     # Load the pre-trained Logistic Regression model
-    with open('logistic_regression_model.pkl', 'rb') as f:
+    with open('app/logistic_regression_model.pkl', 'rb') as f:
         logistic_regression_model = pickle.load(f)
 
     # Load the pre-trained TfidfVectorizer
