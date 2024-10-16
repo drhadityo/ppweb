@@ -36,7 +36,7 @@ def preprocess_text(text):
 # Main function to run the Streamlit app
 def main():
     st.title("Text Preprocessing and Classification App")
-    st.write("Aplikasi ini merupakan menggunakan preprocesses text dan membuat prediksi menggunakan pre-trained Logistic Regression Model.")
+    st.write("Aplikasi ini menggunakan preprocesses text dan membuat prediksi menggunakan model Logistic Regression Model.")
 
     # Load the pre-trained Logistic Regression model
     with open('logistic_model.pkl', 'rb') as f:
@@ -47,7 +47,7 @@ def main():
         vectorizer = pickle.load(f)
 
     # Get user input
-    text_input = st.text_input("Enter some news text:")
+    text_input = st.text_input("Masukkan Teks:")
     if text_input:
         # Preprocess the text
         preprocessed_text = preprocess_text(text_input)
